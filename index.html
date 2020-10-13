@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajalakshmi</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="background">
+
+    <div class="nav">
+        <a class="a active" href="#">HOME</a>
+        <a class="b" href="#">ABOUT ME</a>
+        <a class="c" href="#">GALLERY</a>
+        <a class="d" href="#">CONTACT US</a>
+
+    
+    </div> 
+    <div class="content">
+        <div class="home">
+            <h1>I am Raj</h1>
+            <h3>Puppy Lover</h3>
+        </div>
+        <div class="aboutus">
+            <p>
+                <b>Hello there my friends,</b><br> I am a VITian <br>
+                I am a fresher, studying computer science with Artificial intelligence and machine learning. I love to dance and listen to music. I also code during my free times. And not only that... if there was a true pup lover in this world, that would be me. <br>
+                <br> I am a lot experienced with Python and C++ and know a little bit of C# and Java. Im also a linguist which means that I like to learn new languages. Im already fluent enough in Japanese and a little bit fluent in Korean. <br>
+                <br>  I also like to write short stories and novels. I make you guys know once my works are published. <br>
+                Looking forward to meet u all !!!
+            </p>
+            
+        </div>
+
+        <div class="gallery">
+        <h1>This is my pup gallery</h1>
+            <div class="image">
+                <img src="images/pup1.jpg">
+            </div>
+            <div class="image">
+                <img src="images/pup2.jpg">
+            </div>
+            <div class="image">
+                <img src="images/pup3.jpg">
+            </div>
+            <div class="image">
+                <img src="images/pup4.jpg">
+            </div>
+            <div class="image">
+                <img src="images/pup5.jpg">
+            </div>
+            <div class="image">
+                <img src="images/pup6.jpg">
+            </div>
+            <div class="image">
+                <img src="images/pup7.jpg">
+            </div>
+            <div class="image">
+                <img src="images/pup8.jpg">
+            </div>
+            <div class="image">
+                <img src="images/pup9.jpg">
+            </div>
+        </div>
+        <div class="contactus">
+            <div class="contactform">
+                <form action="index.html" method="POST">
+                    <input type="text" name="" class="inputtext" value="First Name">
+                    <input type="text" name="" class="inputtext" value="Last Name">
+                    <input type="text" name="" class="inputtext" value="Your Email">
+                    <textarea name="" id="" cols="4" rows="6" class="inputmessage">Your Messages...</textarea>
+                    <input type="button" name="" class="submitbutton" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+             $('a').click(function(){
+                 var selected = $(this);
+                 $('a').removeClass('active');
+                 $(selected).addClass('active');
+             });
+
+             var $a = $('.a'),
+             $b = $('.b'),
+             $c = $('.c'),
+             $d = $('.d'),
+             $home = $('.home'),
+             $aboutus = $('.aboutus'),
+             $gallery = $('.gallery'),
+             $contactus = $('.contactus');
+
+             $a.click(function(){
+                 $home.fadeIn();
+                 $aboutus.fadeOut();
+                 $gallery.fadeOut();
+                 $contactus.fadeOut();
+             });     
+
+             $b.click(function(){
+                 $aboutus.fadeIn();
+                 $home.fadeOut();
+                 $gallery.fadeOut();
+                 $contactus.fadeOut();
+             });         
+                 
+             $c.click(function(){
+                 $gallery.fadeIn(); 
+                 $home.fadeOut();
+                 $aboutus.fadeOut();
+                 $contactus.fadeOut();      
+             });
+             
+             $d.click(function(){
+                $contactus.fadeIn()
+                $home.fadeOut()
+                $aboutus.fadeOut()
+                $gallery.fadeOut()
+                    
+             });        
+
+        });
+
+    </script>
+    
+</body>
+</html>
